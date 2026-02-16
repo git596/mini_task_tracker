@@ -1,4 +1,4 @@
-This(dbscript) folder contains SQL scripts for setting up the MySQL database for the Mini Task Tracker application.
+# SQL scripts for setting up database
 
 ## Files
 

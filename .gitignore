@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+target/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+*.class
+*.jar
+*.war
+
+# Spring Boot
+HELP.md
+.mvn/wrapper/maven-wrapper.jar
+
+# React
+.vite/
+*.tsbuildinfo
