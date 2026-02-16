@@ -5,7 +5,7 @@
 - **schema.sql** - Creates the database and its tables
 - **data.sql** - Inserts sample/master data for testing
 
-## Setup Instructions
+## Setup Instructions (Option 2 is recommended)
 
 ### Option 1: Manual Execution (Open CMD/Terminal and run following commands)
 
@@ -38,6 +38,7 @@
 The application is configured with `spring.jpa.hibernate.ddl-auto=update` in `application.properties`, which means:
 - Tables will be **automatically created** when you first run(successfully) the backend(server) 
 - Schema changes will be **automatically applied** on subsequent runs
+- Note: Here first you need to create a database in mysql with the name you specified at application.properties before running the backend. After creating the database you can run the backend. It will create the tables accordingly.
 
 ## Default User Credentials
 After running `data.sql`, you have follwoing credentials to login to the system:

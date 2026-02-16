@@ -26,5 +26,6 @@ public class TaskRequestDTO {
 
     private TaskPriority priority;
 
+    @jakarta.validation.constraints.FutureOrPresent(message = "Due date cannot be in the past")
     private LocalDate dueDate;
 }

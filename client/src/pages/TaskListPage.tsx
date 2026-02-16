@@ -118,8 +118,8 @@ export function TaskListPage() {
             <div className="container mx-auto px-4 py-8">
                 <div className="flex justify-between items-center mb-8">
                     <div>
-                        <h1 className="text-3xl font-bold">My Tasks</h1>
-                        <p className="text-muted-foreground mt-1">{totalElements} total tasks</p>
+                        <h1 className="text-3xl font-bold">Task List</h1>
+                        <p className="text-muted-foreground mt-1">Total Tasks: {totalElements}</p>
                     </div>
                     <Button onClick={() => navigate('/tasks/new')}>
                         <Plus className="mr-2 h-4 w-4" />
@@ -209,24 +209,24 @@ export function TaskListPage() {
                                                 <Badge className={statusColors[task.status]}>{task.status.replace('_', ' ')}</Badge>
                                             </div>
                                         </div>
-                                        <CardDescription className="flex items-center gap-2">
-                                            <Badge variant="outline" className={priorityColors[task.priority]}>
-                                                {task.priority}
-                                            </Badge>
-                                            {task.dueDate && (
-                                                <span className="text-xs">Due: {new Date(task.dueDate).toLocaleDateString()}</span>
-                                            )}
-                                        </CardDescription>
+                                        
                                     </CardHeader>
                                     <CardContent>
                                         <p className="text-sm text-muted-foreground line-clamp-3">
                                             {task.description || 'No description'}
                                         </p>
                                     </CardContent>
+                                    <CardDescription className="flex items-center gap-2">
+                                        <Badge variant="outline" className={priorityColors[task.priority]}>
+                                            {task.priority}
+                                        </Badge>
+                                        {task.dueDate && (
+                                            <span className="text-xs">Due: {new Date(task.dueDate).toLocaleDateString()}</span>
+                                        )}
+                                    </CardDescription>
                                     <CardFooter className="flex justify-between">
                                         <Button variant="ghost" size="sm" onClick={() => navigate(`/tasks/${task.id}`)}>
-                                            <Eye className="mr-2 h-4 w-4" />
-                                            View
+                                            <Eye className="mr-1 h-4 w-4" />
                                         </Button>
                                         <div className="flex gap-2">
                                             <Button variant="ghost" size="sm" onClick={() => navigate(`/tasks/${task.id}/edit`)}>

@@ -63,6 +63,21 @@ export function TaskFormPage() {
             return;
         }
 
+        if (dueDate) {
+            const selectedDate = new Date(dueDate);
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            
+            // Adjust for timezone offset to compare dates correctly
+            const selectedDateLocal = new Date(selectedDate.getUTCFullYear(), selectedDate.getUTCMonth(), selectedDate.getUTCDate());
+            selectedDateLocal.setHours(0, 0, 0, 0);
+
+            if (selectedDateLocal < today) {
+                toast.error('Due date cannot be in the past');
+                return;
+            }
+        }
+
         const taskData = {
             title: title.trim(),
             description: description.trim() || undefined,

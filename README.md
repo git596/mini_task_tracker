@@ -1,7 +1,7 @@
 
 # mini_task_tracker
 
-This is a full-stack web application built with React.js (frontend), Java (Spring Boot, backend), and MySQL (database).
+This is a Mobile Responsive full-stack web application built with React.js (frontend), Java (Spring Boot, backend), and MySQL (database).
 
 ---
 
